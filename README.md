@@ -9,4 +9,4 @@ Or else we can get information like the current population of the country or the
 
 I have attached some snap shots do check them out.
 
-![SNAP-SHOT-1](http:https://github.com/lokeshvasnik/COUNTRY-DETAILS-API-PROJECT/blob/main/01.png)
+![SNAP-SHOT-1](https://github.com/lokeshvasnik/COUNTRY-DETAILS-API-PROJECT/blob/main/01.png)
