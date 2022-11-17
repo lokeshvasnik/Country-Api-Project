@@ -8,6 +8,11 @@ searchBtn.addEventListener('click', (e) => {
 
   const searchWrapper = document.querySelector('.box-model');
 
+  const continent = document.querySelector('.continent');
+  const population = document.querySelector('.population');
+  const capital = document.querySelector('.capital');
+  const currency = document.querySelector('.currency');
+
   let countryName = countryInp.value;
 
   let finalURL = `https://restcountries.com/v3.1/name/${countryName}`;
@@ -36,18 +41,20 @@ searchBtn.addEventListener('click', (e) => {
       .then((response) => response.json())
       .then((data) => {
         // Injecting to html
-
         hideLoader();
+
+        // Cards
+        continent.innerHTML = data[0].continents;
+        population.innerHTML = data[0].population;
+        capital.innerHTML = data[0].capital;
+        currency.innerHTML =
+          data[0].currencies[Object.keys(data[0].currencies)].name;
+        // Result
         result.innerHTML = `
          <img src="${data[0].flags.svg}" class="flag-img">
 
         <h2> ${data[0].name.common}</h2>
-          <div class="wrapper">
-              <div class="data-wrapper">
-                  <h4>Capital:</h4>
-                  <span>${data[0].capital[0]}</span>
-              </div>
-          </div>  
+   
                   
         `;
       })

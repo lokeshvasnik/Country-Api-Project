@@ -4,14 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
     <!-- Title -->
-    <title>Bootstrap demo</title>
+    <title>COUNTRY API</title>
     <!-- Custom Css -->
     <link rel="stylesheet" href="Css/style.css">
     <!-- Bootstrap Css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+
+<!-- Body -->
 
 <body>
     <!-- Navbar -->
@@ -26,29 +36,73 @@
         </div>
     </nav>
 
-    <!-- Body -->
     <!-- Container -->
-    <div class="container d-flex justify-content-center align-items-center vh-100">
-        <div class="card" style="width: 45rem;">
-            <div class="card-body">
-                <!-- Card details -->
-                <h5 class="card-title">DETAILS</h5>
-                <div class="box-model">
-                    <!-- Form -->
-                    <form class="search-wrapper">
-                        <label for="search">Search for stuff</label>
-                        <input class="country-inp" id="search" type="search" placeholder="Enter Country Name" autofocus
-                            required />
-                        <button id="search-btn" type="submit">Go</button>
-                    </form>
+    <div class="container text-center vh-100 my-5">
+        <!-- First col  -->
+        <div class="row">
+            <div class="col">
+                <!-- Display card -->
+                <div class="card capital__right__card ">
+                    <div class="card-body">
+                        <h5 class="card-title">CONTINENT</h5>
+                        <p class="continent"></p>
+                    </div>
                 </div>
-                <!-- Displaying div -->
-                <div id="result">
 
+                <!-- Display card -->
+                <div class="card capital__right__card my-5 ">
+                    <div class="card-body">
+                        <h5 class="card-title">POPULATION</h5>
+                        <p class="population"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Middle col  -->
+            <div class="col-lg-6">
+                <div class="card mb-5">
+                    <div class="card-body ">
+                        <!-- Card details -->
+                        <h5 class="card-title">DETAILS</h5>
+                        <div class="box-model">
+                            <!-- Form -->
+                            <form class="form search-wrapper">
+                                <i class="fa fa-search"></i>
+                                <input type="text" class="country-inp form-control form-input " id="search"
+                                    type="search" placeholder="Enter Country Name">
+                                <button type="submit" class="left-pan" id="search-btn">
+                                    Enter
+                                </button>
+                            </form>
+                        </div>
+                        <!-- Displaying div -->
+                        <div id="result">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Third col -->
+            <div class="col">
+                <!-- Display card -->
+                <div class="card capital__left__card ">
+                    <div class="card-body">
+                        <h5 class="card-title">CAPITAL</h5>
+                        <p class="capital"></p>
+                    </div>
+                </div>
+
+                <!-- Display card -->
+                <div class="card capital__left__card my-5 ">
+                    <div class="card-body">
+                        <h5 class="card-title">CURRENCY</h5>
+                        <p class="currency"></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 
     <!-- Customer Javascript -->
     <script src="Js/app.js"></script>

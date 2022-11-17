@@ -27,66 +27,55 @@ body {
   background-color: var(--blue);
   font-family: 'Ubuntu', sans-serif;
   background-image: url(../Images/background.png);
-  background-position: cover;
-  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 /* Form Css */
 
-form {
-  position: relative;
-  width: 30rem;
-  background: var(--color-brand);
-  border-radius: var(--rad);
-}
-input,
-button {
-  height: var(--height);
-  font-family: var(--font-fam);
-  border: 0;
-  color: var(--color-dark);
-  font-size: 1.8rem;
-}
-input[type='search'] {
-  outline: 0;
-  width: 100%;
-  background: var(--color-light);
-  padding: 0 1.6rem;
-  border-radius: var(--rad);
-  appearance: none;
-  transition: all var(--dur) var(--bez);
-  transition-property: width, border-radius;
-  z-index: 1;
+.form {
   position: relative;
 }
 
-/* Button */
-button {
-  display: none;
+.form .fa-search {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: var(--btn-width);
-  font-weight: bold;
-  background: var(--color-brand);
-  border-radius: 0 var(--rad) var(--rad) 0;
+  top: 20px;
+  left: 20px;
+  color: #9ca3af;
 }
-input:not(:placeholder-shown) {
-  border-radius: 0 0 0 var(--rad);
-  width: calc(100% - var(--btn-width));
-}
-input:not(:placeholder-shown) + button {
-  display: block;
-}
-label {
+
+.form span {
   position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
+  right: 17px;
+  top: 13px;
+  padding: 2px;
+  border-left: 1px solid #d1d5db;
+}
+
+.left-pan {
+  padding-left: 7px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.left-pan i {
+  padding-left: 10px;
+}
+
+.form-input {
+  height: 55px;
+  text-indent: 33px;
+  border-radius: 10px;
+}
+
+.form-input:focus {
+  box-shadow: none;
+  border: none;
 }
 
 /* Country flags */
@@ -103,3 +92,5 @@ label {
 .search-wrapper {
   width: 100%;
 }
+
+/* Media Querry */
